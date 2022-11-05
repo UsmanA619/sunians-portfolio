@@ -1,38 +1,346 @@
-.App {
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+@import url("https://fonts.cdnfonts.com/css/futura-condensed-pt?styles=16582,16588");
+@import url("https://fonts.cdnfonts.com/css/futura-md-bt?styles=17514");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova", sans-serif;
+  transition: 0.5s;
+}
+
+.menu_div {
+  display: none;
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu_btn {
+  margin: 12px 0 18px 0;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu_items {
+  font-size: 16px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 2.5em;
+  letter-spacing: 0.42px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.7);
+  margin-bottom: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu_items_div {
+  overflow: hidden;
+  transition: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.menu_items_div p:first-child {
+  color: black;
+}
+
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header h1 {
+  font-size: 36px;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  /* font-family: "Futura Condensed PT", sans-serif; */
+  /* font-family: "Futura PT", sans-serif; */
+  font-family: "Futura Md BT", sans-serif;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 35px;
+  font-size: 14px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 28px;
+  letter-spacing: 0.42px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+header nav ul:last-child {
+  margin-right: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.showcase_images_div {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.image_div {
+  height: 19vw;
+  width: 19.8%;
+  padding: 1px;
+}
+
+.showcase_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 1.4rem;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  transition: 0.1s;
+}
+footer div {
+  cursor: pointer;
+}
+
+footer div i {
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.contactPage_Container {
+  margin-top: 35px;
+  padding: 0 20px;
+}
+
+.contactMe_heading {
+  text-align: center;
+  font-family: "Futura PT", sans-serif;
+  font-size: 32.4px;
+  line-height: 48.6px;
+  vertical-align: baseline;
+  letter-spacing: 6.48px;
+  word-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+}
+
+.contactMe_subheading {
+  font-size: 16.2px;
+  line-height: 19.44px;
+  vertical-align: baseline;
+  letter-spacing: 3.24px;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+  padding-top: 5px;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.contactPage_Section {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactPage_Section section {
+  width: 58%;
+  padding: 0 10px;
+  padding-top: 80px;
+}
+
+.contactPage_Section div {
+  width: 42%;
+}
+
+.contactPage_Section_inpTile {
+  font-size: 18px;
+  line-height: normal;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: start;
+  text-indent: 0px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.contactPage_Section_inp {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background-color: #fafafa;
+  padding: 8px 5px;
+}
+
+.contactPage_Section_inpTile_small {
+  font-size: 12px;
+  line-height: normal;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: start;
+  text-indent: 0px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.contactPage_Section_sbmtBtn {
+  border: none;
+  background: #272727;
   color: white;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-size: 14px;
+  line-height: 14px;
+  vertical-align: baseline;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  text-indent: 0px;
+  width: 130px;
 }
 
-.App-link {
-  color: #61dafb;
+.contactPage_Section_sbmtBtn:hover{
+  background: #525252;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contactpage_logo_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactpage_logo_div img {
+  width: 25vw;
+}
+
+@media (max-width: 1200px) {
+  header {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  header h1 {
+    width: 100%;
+  }
+
+  header nav {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 945px) {
+  header nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .container-fluid {
+    --bs-gutter-x: 0 !important;
+  }
+
+  .showcase_images_div {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 750px) {
+  header nav {
+    display: none;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .menu_div {
+    display: inline-block;
+  }
+  .container-fluid {
+    margin-top: 50px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  .image_div {
+    height: 48vw;
+    width: 49%;
+  }
+  footer {
+    height: 200px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    margin: 0;
+  }
+  .contactPage_Section {
+    flex-direction: column;
+  }
+  .contactPage_Section section {
+    width: 100%;
+  }
+
+  .contactPage_Section div {
+    width: 100%;
+  }
+
+  .contactpage_logo_div img {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 350px) {
+  footer {
+    padding-bottom: 15px;
   }
 }
