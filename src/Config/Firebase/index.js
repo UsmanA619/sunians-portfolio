@@ -14,12 +14,13 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBsvvsd9Fam6ABc8y5xfVKq-Hl5ZjbLG2M",
-  authDomain: "shahsunaingadir.firebaseapp.com",
-  projectId: "shahsunaingadir",
-  storageBucket: "shahsunaingadir.appspot.com",
-  messagingSenderId: "404060708114",
-  appId: "1:404060708114:web:2929ca8097c12573bc27cb",
+  apiKey: "AIzaSyBXwiRhJjq2YbUN6k-sG3uXQJi4j1wonE4",
+  authDomain: "shahsunaingadit.firebaseapp.com",
+  databaseURL: "https://shahsunaingadit-default-rtdb.firebaseio.com",
+  projectId: "shahsunaingadit",
+  storageBucket: "shahsunaingadit.appspot.com",
+  messagingSenderId: "87907396183",
+  appId: "1:87907396183:web:7d3b87e49162b5a9615112",
 };
 
 // Initialize Firebase

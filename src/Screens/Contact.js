@@ -88,7 +88,7 @@ export default function Contact() {
           </form>
         </section>
         <div className="contactpage_logo_div">
-          <img src="assets/Logo.jpg" alt="logo" />
+          <img src="assets/Logo.png" alt="logo" />
         </div>
       </section>
     </div>

@@ -283,7 +283,7 @@ footer div i {
 }
 
 .contactpage_logo_div img {
-  width: 25vw;
+  width: 15vw;
 }
 
 .aboutusContainer {
@@ -451,7 +451,8 @@ footer div i {
   }
 
   .contactpage_logo_div img {
-    width: 50vw;
+    width: 42vw;
+    margin-top: 30px;
   }
 }
 
