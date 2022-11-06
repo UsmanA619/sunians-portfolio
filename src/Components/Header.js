@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
-export default function Header() {
+export default function Header({ categorynames }) {
   const [open, toggle] = useState(false);
 
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const transition = useSpring({
-    height: open ? 300 : 0,
+    height: open ? 330 : 0,
   });
+
+  const changeRoute = (route) => {
+    if (pathname === "/" && route === "/") {
+      window.location.reload();
+    } else {
+      navigate(route);
+      toggle(false);
+    }
+  };
 
   return (
     <>
@@ -19,13 +29,7 @@ export default function Header() {
           id="menuItemsDiv"
           className="menu_items_div"
         >
-          <p
-            onClick={() => {
-              navigate("/");
-              toggle(!open);
-            }}
-            className="menu_items"
-          >
+          <p onClick={() => changeRoute("/")} className="menu_items">
             Home
           </p>
           <p className="menu_items">Graphic Designing</p>
@@ -33,13 +37,10 @@ export default function Header() {
           <p className="menu_items">Photography</p>
           <p className="menu_items">Videography</p>
           <p className="menu_items">Video Editing</p>
-          <p
-            onClick={() => {
-              navigate("/Contact");
-              toggle(!open);
-            }}
-            className="menu_items"
-          >
+          <p onClick={() => changeRoute("/About")} className="menu_items">
+            About
+          </p>
+          <p onClick={() => changeRoute("/Contact")} className="menu_items">
             Contact me
           </p>
         </animated.div>
@@ -50,18 +51,31 @@ export default function Header() {
       </div>
 
       <header>
-        <h1 onClick={() => navigate("/")} className="uppercase">
+        <h1 onClick={() => changeRoute("/")} className="uppercase">
           Shah Sunain
         </h1>
 
         <nav>
           <ul>
-            <li onClick={() => navigate("/")}>Home</li>
+            {categorynames?.map((elem) => (
+              <li
+                key={elem.name}
+                onClick={() =>
+                  elem.name === "Home"
+                    ? navigate("/")
+                    : navigate("/Category", { state: elem.name })
+                }
+              >
+                {elem.name}
+              </li>
+            ))}
+            {/* <li onClick={() => navigate("/")}>Home</li>
             <li>Graphic Designing</li>
             <li>3D</li>
             <li>Photography</li>
             <li>Videography</li>
-            <li>Video Editing</li>
+            <li>Video Editing</li> */}
+            <li onClick={() => navigate("/About")}>About</li>
             <li onClick={() => navigate("/Contact")}>Contact me</li>
           </ul>
         </nav>

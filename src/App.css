@@ -55,25 +55,29 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 95%;
   margin: 20px auto;
+  margin-bottom: 60px;
 }
 
 header h1 {
+  display: inline-block;
   font-size: 36px;
   letter-spacing: 0.1rem;
   cursor: pointer;
-  /* font-family: "Futura Condensed PT", sans-serif; */
-  /* font-family: "Futura PT", sans-serif; */
   font-family: "Futura Md BT", sans-serif;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+  padding-top: 10px;
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0 !important;
 }
 
 header nav ul li {
@@ -105,6 +109,16 @@ header nav ul:last-child {
   height: 19vw;
   width: 19.8%;
   padding: 1px;
+  cursor: pointer;
+  overflow: hidden !important;
+}
+
+.image_div:hover{
+  filter: opacity(.8);
+}
+
+.image_div img:hover{
+  transform: scale(1.1);
 }
 
 .showcase_image {
@@ -254,7 +268,7 @@ footer div i {
   width: 130px;
 }
 
-.contactPage_Section_sbmtBtn:hover{
+.contactPage_Section_sbmtBtn:hover {
   background: #525252;
 }
 
@@ -268,7 +282,116 @@ footer div i {
   width: 25vw;
 }
 
-@media (max-width: 1200px) {
+.aboutusContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 96%;
+  padding-top: 20px;
+}
+
+.aboutusContainer div {
+  width: 50%;
+  height: 50vw;
+}
+
+.ProfileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutusContainerfirstdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto !important;
+}
+
+.aboutusContainerfirstdiv h2 {
+  font-size: 3.3vw;
+  font-family: "Futura Md BT", sans-serif;
+  line-height: 76.2348px;
+  vertical-align: baseline;
+  letter-spacing: 0.693043px;
+  word-spacing: 0px;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+  padding-bottom: 3.2vw;
+}
+
+.aboutusContainerPara {
+  font-size: 14.4384px;
+  line-height: 21.6576px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 4.5vw;
+}
+
+.aboutusContainerPara span {
+  font-weight: 600;
+}
+
+.model {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  transition: opacity 0.4s ease, visibility 0.4s ease,
+    transform 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  transform: scale(0);
+  overflow: hidden;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.model img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+}
+
+.ImgcloseIcon{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* @media (max-width: 1300px) {
   header {
     flex-direction: column;
   }
@@ -280,7 +403,7 @@ footer div i {
     margin-top: 10px;
     align-self: flex-end;
   }
-}
+} */
 
 @media (max-width: 945px) {
   header nav ul li {
@@ -336,6 +459,27 @@ footer div i {
 
   .contactpage_logo_div img {
     width: 50vw;
+  }
+}
+
+@media (max-width: 438px) {
+  .aboutusContainer {
+    width: 98%;
+    flex-direction: column-reverse;
+  }
+
+  .aboutusContainer div {
+    width: 100%;
+    height: 100vw;
+  }
+
+  .aboutusContainer div:first-child {
+    height: auto;
+  }
+
+  .aboutusContainerfirstdiv h2 {
+    font-size: 7vw;
+    padding-bottom: 2vw;
   }
 }
 
