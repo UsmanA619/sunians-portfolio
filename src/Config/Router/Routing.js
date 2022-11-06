@@ -9,11 +9,13 @@ import About from "../../Screens/About";
 import ScrollToTop from "./ScrollToTop";
 import { database, onValue, ref } from "../Firebase";
 import Category from "../../Screens/Category";
+import Loading from "../../Components/Loading";
 
 const AppRouter = () => {
   const [imageData, setImageData] = useState([]);
   const [categorynames, setcategorynames] = useState([]);
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const fetchImages = async () => {
     const locRef = ref(database, "catogries");
@@ -25,6 +27,7 @@ const AppRouter = () => {
       }
 
       setData(data);
+      setLoading(false);
     });
   };
 
@@ -34,15 +37,18 @@ const AppRouter = () => {
     onValue(locRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        setcategorynames(Object.values(data).reverse());
+        setcategorynames(Object.values(data));
       }
     });
   };
 
   useEffect(() => {
+    setLoading(true);
     fetchImages();
     fetchCatrgories();
   }, []);
+
+  if (loading) return <Loading />;
 
   return (
     <Router>

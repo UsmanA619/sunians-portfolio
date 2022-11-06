@@ -4,12 +4,15 @@ import { useSpring, animated } from "react-spring";
 
 export default function Header({ categorynames }) {
   const [open, toggle] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  const menuItemsDivHeight = 42 * (categorynames.length + 2);
+
   const transition = useSpring({
-    height: open ? 330 : 0,
+    height: open ? menuItemsDivHeight : 0,
   });
 
   const changeRoute = (route) => {
@@ -29,18 +32,51 @@ export default function Header({ categorynames }) {
           id="menuItemsDiv"
           className="menu_items_div"
         >
-          <p onClick={() => changeRoute("/")} className="menu_items">
-            Home
-          </p>
-          <p className="menu_items">Graphic Designing</p>
-          <p className="menu_items">3D</p>
-          <p className="menu_items">Photography</p>
-          <p className="menu_items">Videography</p>
-          <p className="menu_items">Video Editing</p>
-          <p onClick={() => changeRoute("/About")} className="menu_items">
+          {categorynames?.map((elem, index) => (
+            <p
+              key={index}
+              onClick={() => {
+                setActiveItem(elem.name);
+                if (elem.name === "Home") {
+                  navigate("/");
+                  toggle(false);
+                } else {
+                  navigate("/Category", { state: elem.name });
+                }
+              }}
+              className={
+                activeItem === elem.name
+                  ? "menu_items menuItemActive"
+                  : "menu_items"
+              }
+            >
+              {elem.name}
+            </p>
+          ))}
+          <p
+            onClick={() => {
+              changeRoute("/About");
+              setActiveItem("About");
+            }}
+            className={
+              activeItem === "About"
+                ? "menu_items menuItemActive"
+                : "menu_items"
+            }
+          >
             About
           </p>
-          <p onClick={() => changeRoute("/Contact")} className="menu_items">
+          <p
+            onClick={() => {
+              changeRoute("/Contact");
+              setActiveItem("Contact");
+            }}
+            className={
+              activeItem === "Contact"
+                ? "menu_items menuItemActive"
+                : "menu_items"
+            }
+          >
             Contact me
           </p>
         </animated.div>
