@@ -6,9 +6,9 @@ export default function About() {
       <div className="aboutusContainerfirstdiv">
         <h2>ABOUT SUNAIN</h2>
         <p className="aboutusContainerPara">
-          Kaiwan Shaban, is a 23 years old visual artist. Born and raised in the
-          city of Akre in the Kurdistan region, Currently based in Warsaw,
-          Poland
+          Shah Sunain, is a 18 years old graphic designer. Born and raised in the
+          city of karachi in the pakistan region, Currently based in Karachi,
+          Sindh
         </p>
         <p className="aboutusContainerPara">
           His creations represent an amalgamation of digital art and
@@ -32,7 +32,7 @@ export default function About() {
           for the art as he does, maybe even more.
         </p>
         <p className="aboutusContainerPara">
-          <span>For business inquiries | info@kaiwanshaban.com</span>
+          <span>For business inquiries | m.shahsunaingadit@gmail.com</span>
         </p>
       </div>
       <div>
