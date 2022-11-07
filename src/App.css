@@ -71,6 +71,9 @@ header h1 {
   letter-spacing: 0.1rem;
   cursor: pointer;
   font-family: "Futura Md BT", sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 header nav {
@@ -117,13 +120,6 @@ header nav ul:last-child {
   overflow: hidden !important;
 }
 
-.image_div:hover {
-  filter: opacity(0.8);
-}
-
-.image_div img:hover {
-  transform: scale(1.1);
-}
 
 .showcase_image {
   height: 100%;
@@ -355,9 +351,8 @@ footer div i {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
-  transition: opacity 0.4s ease, visibility 0.4s ease,
-    transform 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: opacity 0.3s ease, visibility 0.4s ease;
   visibility: hidden;
   opacity: 0;
   z-index: 999;
@@ -387,11 +382,10 @@ footer div i {
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 2rem;
-  height: 2rem;
+  font-size: 38px !important;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  background-color: transparent;
+  color: #4e4e4e;
   cursor: pointer;
 }
 

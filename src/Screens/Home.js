@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
-// import imageData from "../Config/imageData";
-
 export default function Home({ imageData }) {
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState(false);
@@ -12,13 +10,19 @@ export default function Home({ imageData }) {
     setModel(true);
   };
 
+
   return (
     <>
-      <div className={model ? "model open" : "model"}>
+      <div
+        className={model ? "model open" : "model"}
+      >
         <img src={tempImgSrc ? tempImgSrc : ""} />
         <CloseIcon onClick={() => setModel(false)} className="ImgcloseIcon" />
       </div>
-      <section style={{ minHeight: "70vh"}} className="container-fluid text-center">
+      <section
+        style={{ minHeight: "70vh" }}
+        className="container-fluid text-center"
+      >
         <div className="showcase_images_div">
           {imageData.length
             ? imageData.map((item) => (

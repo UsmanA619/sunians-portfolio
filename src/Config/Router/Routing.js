@@ -22,7 +22,7 @@ const AppRouter = () => {
 
     onValue(locRef, (snapshot) => {
       const data = snapshot.val();
-      if (data.Home) {
+      if (data?.Home) {
         setImageData(Object.values(data?.Home));
       }
 
