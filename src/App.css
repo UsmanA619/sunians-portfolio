@@ -107,24 +107,29 @@ header nav ul:last-child {
 }
 
 .showcase_images_div {
+  /* border: 1px solid black; */
+  /* padding-left: 2%; */
   display: flex;
   flex-wrap: wrap;
+  min-height: 70vh;
+  align-content: flex-start;
   justify-content: center;
 }
 
 .image_div {
-  height: 19vw;
-  width: 19.8%;
-  padding: 1px;
+  /* height: 19vw; */
+  height: 16vw;
+  /* width: 19.8%; */
+  padding: 2px;
   cursor: pointer;
   overflow: hidden !important;
 }
 
-
 .showcase_image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  /* transition: .5s !important; */
+  /* object-fit: cover; */
 }
 
 footer {
@@ -226,7 +231,7 @@ footer div i {
   width: 100%;
   border: 1px solid #cccccc;
   border-radius: 2px;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   padding: 8px 5px;
 }
 
@@ -361,9 +366,9 @@ footer div i {
 }
 
 .open {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
 }
 
 .model img {
@@ -389,6 +394,138 @@ footer div i {
   cursor: pointer;
 }
 
+.warning_box {
+  align-self: flex-start;
+  background: #cc3b3b;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  width: auto !important;
+  padding-right: 10px;
+  margin-bottom: 15px;
+}
+
+.warning_box p {
+  color: white;
+  font-size: 13px;
+  line-height: 23px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: start;
+  text-indent: 0px;
+  margin-bottom: 0 !important;
+}
+
+.warning_box i {
+  color: white;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.videos_container {
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.videos_container .video {
+  height: 25em;
+  width: 45em;
+  margin: 0.1em;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: none;
+}
+
+/* .videos_container .video img {
+  object-fit: cover;
+  height: 100%;
+} */
+
+.videos_container .video iframe {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.videos_container .video i {
+  position: absolute;
+  color: white;
+  font-size: 3.7em;
+  cursor: pointer;
+}
+
+.videos_container .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  z-index: 2;
+}
+
+.fullVideoContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: opacity 0.3s ease, visibility 0.4s ease;
+  visibility: hidden;
+  z-index: 2;
+  transform: scale(0);
+  overflow: hidden;
+
+  /* width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: opacity 0.3s ease, visibility 0.4s ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  transform: scale(0);
+  overflow: hidden; */
+}
+
+.fullVideo {
+  width: 80%;
+  height: 80%;
+  border-radius: 2px;
+}
+
+.expandMoreDiv {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
 @media (max-width: 945px) {
   header nav ul li {
     margin-bottom: 20px;
@@ -399,8 +536,14 @@ footer div i {
   }
 
   .showcase_images_div {
-    justify-content: flex-start !important;
+    /* justify-content: flex-start !important; */
     padding-left: 1%;
+  }
+
+  .fullVideo {
+    width: 99%;
+    /* height: 80vw; */
+    border-radius: 2px;
   }
 }
 
@@ -424,8 +567,9 @@ footer div i {
     font-size: 1.8em;
   }
   .image_div {
-    height: 48vw;
-    width: 49%;
+    /* height: 48vw; */
+    /* width: 49%; */
+    height: 150px;
   }
   footer {
     height: 200px;

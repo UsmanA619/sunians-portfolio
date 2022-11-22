@@ -42,6 +42,7 @@ export default function Header({ categorynames }) {
                   toggle(false);
                 } else {
                   navigate("/Category", { state: elem.name });
+                  toggle(false);
                 }
               }}
               className={
@@ -105,12 +106,6 @@ export default function Header({ categorynames }) {
                 {elem.name}
               </li>
             ))}
-            {/* <li onClick={() => navigate("/")}>Home</li>
-            <li>Graphic Designing</li>
-            <li>3D</li>
-            <li>Photography</li>
-            <li>Videography</li>
-            <li>Video Editing</li> */}
             <li onClick={() => navigate("/About")}>About</li>
             <li onClick={() => navigate("/Contact")}>Contact me</li>
           </ul>
