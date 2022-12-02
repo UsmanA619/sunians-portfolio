@@ -1,0 +1,36 @@
+footer {
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 1.4rem;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  transition: 0.1s;
+}
+footer div {
+  cursor: pointer;
+}
+
+footer div i {
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  footer {
+    height: 200px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 350px) {
+  footer {
+    padding-bottom: 15px;
+  }
+}

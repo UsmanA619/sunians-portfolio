@@ -1,0 +1,145 @@
+.contactPage_Container {
+  margin-top: 35px;
+  padding: 0 20px;
+}
+.contactMe_heading {
+  text-align: center;
+  font-family: "Futura PT", sans-serif;
+  font-size: 32.4px;
+  line-height: 48.6px;
+  vertical-align: baseline;
+  letter-spacing: 6.48px;
+  word-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+}
+.contactMe_subheading {
+  font-size: 16.2px;
+  line-height: 19.44px;
+  vertical-align: baseline;
+  letter-spacing: 3.24px;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+  padding-top: 5px;
+}
+
+.contactPage_Section {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactPage_Section section {
+  width: 58%;
+  padding: 0 10px;
+  padding-top: 80px;
+}
+
+.contactPage_Section div {
+  width: 42%;
+}
+
+.contactPage_Section_inpTile {
+  font-size: 18px;
+  line-height: normal;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: start;
+  text-indent: 0px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.contactPage_Section_inp {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  /* background-color: #fafafa; */
+  padding: 8px 5px;
+}
+
+.contactPage_Section_inpTile_small {
+  font-size: 12px;
+  line-height: normal;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: start;
+  text-indent: 0px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.contactPage_Section_sbmtBtn {
+  border: none;
+  background: #272727;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-size: 14px;
+  line-height: 14px;
+  vertical-align: baseline;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  text-indent: 0px;
+  width: 130px;
+}
+
+.contactPage_Section_sbmtBtn:hover {
+  background: #525252;
+}
+
+.contactpage_logo_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactpage_logo_div img {
+  width: 15vw;
+}
+
+@media (max-width: 750px) {
+  .contactPage_Section {
+    flex-direction: column;
+  }
+  .contactPage_Section section {
+    width: 100%;
+  }
+
+  .contactPage_Section div {
+    width: 100%;
+  }
+
+  .contactpage_logo_div img {
+    width: 42vw;
+    margin-top: 30px;
+  }
+}

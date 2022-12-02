@@ -1,0 +1,80 @@
+.aboutusContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 96%;
+  padding-top: 20px;
+}
+
+.aboutusContainer div {
+  width: 50%;
+  height: 50vw;
+}
+
+.ProfileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutusContainerfirstdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto !important;
+}
+
+.aboutusContainerfirstdiv h2 {
+  font-size: 3.3vw;
+  font-family: "Futura Md BT", sans-serif;
+  line-height: 76.2348px;
+  vertical-align: baseline;
+  letter-spacing: 0.693043px;
+  word-spacing: 0px;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(0, 0, 0);
+  text-align: center;
+  text-indent: 0px;
+  padding-bottom: 3.2vw;
+}
+
+.aboutusContainerPara {
+  font-size: 14.4384px;
+  line-height: 21.6576px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 4.5vw;
+}
+
+.aboutusContainerPara span {
+  font-weight: 600;
+}
+
+@media (max-width: 438px) {
+  .aboutusContainer {
+    width: 98%;
+    flex-direction: column-reverse;
+  }
+
+  .aboutusContainer div {
+    width: 100%;
+    height: 100vw;
+  }
+
+  .aboutusContainer div:first-child {
+    height: auto;
+  }
+
+  .aboutusContainerfirstdiv h2 {
+    font-size: 7vw;
+    padding-bottom: 2vw;
+  }
+}

@@ -1,0 +1,193 @@
+@import url("https://fonts.cdnfonts.com/css/futura-condensed-pt?styles=16584");
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova", sans-serif;
+  transition: 0.5s;
+}
+
+.menu_div {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.menu_btn {
+  margin: 12px 0 18px 0;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.menu_items {
+  font-size: 16px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 2.5em;
+  letter-spacing: 0.42px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.7);
+}
+
+.menu_items_div {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.menu_items_div ul li:first-child {
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header h1 {
+  font-size: 36px;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  font-family: "Futura Condensed PT", sans-serif;
+  font-family: "Futura PT", sans-serif;
+}
+
+header nav ul, .menu_items_div ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 35px;
+  font-size: 14px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 28px;
+  letter-spacing: 0.42px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: #000;
+}
+
+header nav ul:last-child {
+  margin-right: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.showcase_images_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image_div {
+  height: 19vw;
+  width: 19.8%;
+  padding: 1px;
+}
+
+.showcase_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer{
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 1.4rem;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+footer div{
+  cursor: pointer;
+}
+
+footer div i{
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    width: 100%;
+  }
+
+  header nav {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 945px) {
+  header nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .container-fluid{
+    --bs-gutter-x: 0 !important; 
+  }
+}
+
+@media (max-width: 750px) {
+  header nav {
+    display: none;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .menu_div {
+    display: inline-block;
+  }
+  .container-fluid{
+    margin-top: 50px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  .image_div {
+    height: 48vw;
+    width: 49%;
+  }
+  footer{
+    height: 200px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  footer{
+    padding-bottom: 15px;
+  }
+}

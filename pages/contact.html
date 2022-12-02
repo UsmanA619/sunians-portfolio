@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome -->
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="menu_div">
+      <div id="menuItemsDiv" class="menu_items_div">
+        <ul>
+          <li class="menu_items"><a href="../index.html">Home</a></li>
+          <li class="menu_items">Shop</li>
+          <li class="menu_items">NFTS</li>
+          <li class="menu_items">NFT MasterClass</li>
+          <li class="menu_items">Blender MasterClass</li>
+          <li class="menu_items">Print</li>
+          <li class="menu_items"><a href="./about.html">About</a></li>
+          <li class="menu_items">Contact me</li>
+        </ul>
+      </div>
+
+      <button onclick="showMenu()" class="menu_btn">Menu</button>
+    </div>
+
+    <header>
+      <a href="../index.html" style="color: #000; text-decoration: none">
+        <h1 class="uppercase">Shah Sunain</h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li>Shop</li>
+          <li>NFTS</li>
+          <li>NFT MasterClass</li>
+          <li>Blender MasterClass</li>
+          <li>Print</li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./pages/contact.html">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contactPage_Container">
+      <h1 class="contactMe_heading">CONTACT ME</h1>
+      <p class="contactMe_subheading">PLEASE COMPLETE THE FORM BELOW</p>
+
+      <section class="contactPage_Section">
+        <section>
+          <form
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 100%;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+              "
+            >
+              <div style="width: 50%">
+                <label
+                  for="fName"
+                  class="contactPage_Section_inpTile"
+                  style="color: black"
+                >
+                  Name *
+                </label>
+                <input
+                  style="color: #cccccc"
+                  class="contactPage_Section_inp"
+                  type="text"
+                  name="fName"
+                  id="fName"
+                />
+                <label
+                  for="fName"
+                  class="contactPage_Section_inpTile_small"
+                  style="color: black"
+                >
+                  First Name
+                </label>
+              </div>
+
+              <div style="width: 50%">
+                <label
+                  htmlFor="fName"
+                  class="contactPage_Section_inpTile"
+                  style="visibility: hidden"
+                >
+                  Name *
+                </label>
+                <input
+                  style="color: #cccccc"
+                  class="contactPage_Section_inp"
+                  type="text"
+                  name="lName"
+                  id="lName"
+                />
+                <label
+                  htmlFor="lName"
+                  class="contactPage_Section_inpTile_small"
+                  style="color: black"
+                >
+                  Last Name
+                </label>
+              </div>
+            </div>
+
+            <div style="width: 100%; margin-bottom: 30px">
+              <label
+                for="email"
+                class="contactPage_Section_inpTile"
+                style="color: black"
+              >
+                Email *
+              </label>
+              <input
+                style="color: #cccccc"
+                id="email"
+                class="contactPage_Section_inp"
+                type="email"
+                name="email"
+              />
+            </div>
+
+            <div style="width: 100%; margin-bottom: 30px">
+              <label
+                htmlFor="subject"
+                class="contactPage_Section_inpTile"
+                style="color: black"
+              >
+                Subject *
+              </label>
+              <input
+                class="contactPage_Section_inp"
+                style="color: #cccccc"
+                type="text"
+                name="subject"
+                id="subject"
+              />
+            </div>
+
+            <div style="width: 100%; margin-bottom: 30px">
+              <label
+                for="message"
+                class="contactPage_Section_inpTile"
+                style="color: black"
+              >
+                Message *
+              </label>
+              <textarea
+                style="
+                  min-height: 100px;
+                  transition: none;
+                  border-color: #cccccc;
+                "
+                class="contactPage_Section_inp"
+                type="text"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+
+            <button class="contactPage_Section_sbmtBtn">Submit</button>
+          </form>
+        </section>
+        <div class="contactpage_logo_div">
+          <img src="../assets/Logo.png" alt="logo" />
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div onmouseleave="changeToDefaultColor()">
+        <i
+          onmouseenter="changeColors('fbIcon')"
+          id="fbIcon"
+          class="fa-brands fa-facebook-f"
+        >
+        </i>
+        <i
+          onmouseenter="changeColors('twitterIcon')"
+          id="twitterIcon"
+          class="fa-brands fa-twitter"
+        >
+        </i>
+        <i
+          onmouseenter="changeColors('ytIcon')"
+          id="ytIcon"
+          class="fa-brands fa-youtube"
+        >
+        </i>
+        <i
+          onmouseenter="changeColors('instaIcon')"
+          id="instaIcon"
+          class="fa-brands fa-instagram"
+        >
+        </i>
+      </div>
+    </footer>
+
+    <script src="../index.js"></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+  </body>
+</html>
